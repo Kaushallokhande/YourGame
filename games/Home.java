@@ -11,15 +11,15 @@ public class Home {
             Scanner sc = new Scanner(System.in);
             System.out.println();
             System.out.println("=========================================");
-            System.out.println("\tEnter numbers of players:-");
+            System.out.print("Enter numbers of players:-");
 
             int n = sc.nextInt();
             int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
                 arr[i] = i + 1;
             }
-
-            System.out.print("\tEnter players name:-");
+            System.out.println();
+            System.out.print("Enter players name:-");
             String[] str = new String[n];
             for (int i = 0; i < n; i++) {
                 str[i] = sc.next();
@@ -48,6 +48,7 @@ public class Home {
                         break;
                     } else {
                         NewTTT.main(str);
+                        System.out.println("===========The End==========");
                         idx =0;
                         break;
                     }
@@ -58,13 +59,14 @@ public class Home {
                         break;
                     } else {
                         GuessTheNumber.main(str);
+                        System.out.println("===========The End==========");
                         idx = 0;
                         break;
                     }
                 default:
                     System.out.println("invalid value");
             }
-            System.out.println("===========The End==========");
+
         }
     }
 }
