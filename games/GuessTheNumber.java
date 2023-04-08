@@ -2,7 +2,6 @@ package games;
 import java.util.Scanner;
 
 public class GuessTheNumber{
-
     public static void main(String[] args) {
         int tries = 0;
         int flag;
@@ -19,7 +18,6 @@ public class GuessTheNumber{
         System.out.println();
         System.out.println("====================================");
 
-
         switch (flag){
             case 1:int randomNumber = (int) (Math.random() * 10) +1;//*
                 while (win == false){
@@ -29,6 +27,7 @@ public class GuessTheNumber{
                     if (randomNumber == guess){
                         System.out.println("Congrats..");
                         System.out.println("Number of Tries"+ ":" +tries);
+                        return;
 
                     } else if (guess< randomNumber) {
                         System.out.println("too low");
@@ -47,6 +46,7 @@ public class GuessTheNumber{
                 if (randomNumber1 == guess){
                     System.out.println("Congrats..");
                     System.out.println("Number of Tries"+ ":" +tries);
+                    return;
 
                 } else if (guess< randomNumber1) {
                     System.out.println("too low");
@@ -65,6 +65,7 @@ public class GuessTheNumber{
                     if (randomNumber2 == guess){
                         System.out.println("Congrats..");
                         System.out.println("Number of Tries"+ ":" +tries);
+                        return;
                     } else if (guess< randomNumber2) {
                         System.out.println("too low");
                     }else {

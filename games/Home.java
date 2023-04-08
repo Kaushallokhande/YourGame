@@ -35,6 +35,7 @@ public class Home {
             System.out.println("Select your game:");
             System.out.println("1.TicTacToe");
             System.out.println("2.Guess the number");
+            System.out.println("3.Quiz Maths");
             System.out.print("Enter your game number:-");
 
             idx = sc.nextInt();
@@ -61,6 +62,15 @@ public class Home {
                         GuessTheNumber.main(str);
                         System.out.println("===========The End==========");
                         idx = 0;
+                        break;
+                    }
+                case 3:
+                    if (n != 1){
+                    System.out.println("only One player is required");
+                    System.out.println();
+                    break;
+                    }else {
+                        QuizMaths.main(str);
                         break;
                     }
                 default:
